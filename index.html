@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 onmouseover="change();change2()" onmouseout="notChange()" id="header">Đây là lớp C0920I1</h1>
+<input id="header2" oninput="testOnchange()" value="Test onchange">
+<!--<button onmouseover="change();change2()">Change</button>-->
+<input type="radio" name="gender"> Nam
+<br>
+<input type="radio" name="gender"> Nữ
+<br>
+<input type="radio" name="gender"> Cầu vồng
+
+<script>
+    function change() {
+        document.getElementById("header").innerHTML = "Đây là lớp C0920I1 và có 23 thành viên";
+        document.getElementById('header2').value = "Testttttt";
+    }
+
+    function notChange() {
+        document.getElementById("header").innerHTML = "Đây là lớp C0920I1";
+        document.getElementById("header").style.color = "black";
+    }
+
+    function change2() {
+        document.getElementById("header").style.color = "pink";
+    }
+
+    function testOnchange() {
+        alert("Đã gọi được onchange");
+    }
+
+    function inputKeyboard(evt){
+        alert(evt.key);
+    }
+
+    document.addEventListener("keydown",inputKeyboard);
+</script>
+</body>
+</html>
